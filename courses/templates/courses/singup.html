@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block links %}
+    <link rel="stylesheet" href="{% static 'main.css' %}" />
+    <link rel="stylesheet" href="{% static 'courses/singup.css' %}" />
+
+{% endblock %}
+
+  {% block title %} Sajilo Padhai {% endblock %}
+
+{% block body %}
+<header>
+    <span class="ox "><a href="/">SajiloPadhai</a></span>
+  </header>
+
+
+
+
+  
+    <div class="container">
+<h2>Registration</h2>
+        <form action="">
+            <div class="parent">
+         
+            <div class="child">
+
+                <label for="">Last Name:</label>
+                <input type="text">
+            </div>
+            <div class="child">
+
+                <label for="">Email:</label>
+                <input type="email">
+            </div>
+            <div class="child">
+
+                <label for="">Password:</label>
+                <input type="password">
+            </div>
+            <div class="child">
+
+                <label for="">Confirm Password:</label>
+                <input type="password">
+            </div>
+            <div class="child">
+
+                <label for="">Gender:</label>
+                <select>
+                    <option value="science">Male</option>
+                    <option value="management">Female</option>
+                </select>
+            </div>
+         
+          
+         
+        </div>
+          
+        <a href="{% url 'login' %}">Already have account ?</a>
+        <div class="btn-div">
+            <button>Submit</button>
+        </div>
+
+        </div>
+        </form>
+
+    </div>
+
+{% endblock %}

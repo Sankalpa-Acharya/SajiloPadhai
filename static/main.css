@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+body{
+    overflow-x: hidden;
+}
+.ox{
+ font-family: 'Oxygen', sans-serif;
+}
+
+
+.pop{
+    font-family: 'Poppins', sans-serif;
+}
+
+.rob{
+    font-family: 'Roboto', sans-serif;
+}
+

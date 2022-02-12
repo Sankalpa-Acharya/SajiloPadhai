@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block links %}
+    <link rel="stylesheet" href="{% static 'main.css' %}" />
+    <link rel="stylesheet" href="{% static 'courses/content.css' %}" />
+
+{% endblock %}
+
+  {% block title %} Sajilo Padhai {% endblock %}
+
+{% block body %}
+    <header>
+        <span class="ox "><a href="/">SajiloPadhai</a></span>
+      </header>
+  
+
+      <main>
+
+        
+<div class="video-player">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/LBq-rk0ljTw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<div class="video-list">
+    <h3 class="ox">Video List</h3>
+<a href="">
+    <div class="list">
+        <p class="ox">Web Technology-HTML</p>
+
+    </div>
+</a>
+<a href="">
+    <div class="list">
+        <p class="ox">Web Technology-HTML</p>
+
+    </div>
+</a>
+<a href="">
+    <div class="list">
+        <p class="ox">Web Technology-HTML</p>
+
+    </div>
+</a>
+</div>
+      </main>
+
+
+      <div class="blog">
+
+        <h2 class="rob">Web Technology-HTML</h2>
+          <p class="ox">
+            This video is just an introductory video of web technology where I have taught some basic concepts related to website. I have tried to keep things as simple as I can so beginners can easily go throughout the course. 
+          </p>
+
+      </div>
+
+
+
+
+<section>
+
+    <div class="comment">
+
+        <input type="text" class="ox" placeholder="Add Comment">
+        <button class="ox" >Comment</button>
+
+    </div>
+
+    <div class="all-comments">
+<!-- user comment  -->
+        <div class="user-comment">
+
+            <img src="img/sank.jpg" alt="">
+            <div class="profile-name">
+                <p class="ox">Sankalpa</p>
+                <span class="rob">Hi Viewer, if have any suggestions for me then please comment</span>
+            </div>
+            
+        </div>
+<!-- ended here  -->
+    </div>
+
+
+</section>
+
+{% endblock %}

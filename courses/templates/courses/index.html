@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block links %}
+    <link rel="stylesheet" href="{% static 'main.css' %}" />
+    <link rel="stylesheet" href="{% static 'courses/home.css' %}" />
+
+{% endblock %}
+
+  {% block title %} Sajilo Padhai {% endblock %}
+
+{% block body %}
+    <header>
+      <span class="ox "><a href="/">SajiloPadhai</a></span>
+    </header>
+
+    <main>
+      <div class="left-main">
+        <h2 class="ox">Welcome To <span>Sajilo Padhai</span></h2>
+
+        <p class="ox">
+          I have made few of the courses that may help for grade 11 12 students,
+          specially science students. SajiloPadhai will provide you
+          Handwritten Notes for all students soon. I am working on it, if you wish to help me you can contact me through contact button 
+        </p>
+        <a class="ox btn1" href="{% url 'login' %}">Login</a>
+        <a class="ox btn1 btn2">Contact</a>
+      </div>
+
+      <div class="right-main">
+        <img loading="lazy"
+          src="https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa"
+          alt=""
+        />
+      </div>
+    </main>
+
+    <section>
+      <div class="sec-top">
+        <h2 class="ox">Courses</h2>
+      </div>
+      <!-- course start here  -->
+      <div class="courses">
+        <div class="course">
+          <img loading="lazy" src="{% static 'courses/webtech.png' %}" alt="" />
+
+          <div class="course-content">
+            <span> <a class="ox" href="">Web Technology Class 12</a></span>
+            <p class="ox">
+              You will learn all the concept related to Webtechnology in Nepali
+              Language | According to syllabus
+            </p>
+
+            <div class="for-btn">
+              <a class="ox" href="/video">Start Watching</a>
+            </div>
+          </div>
+        </div>
+        <!-- course end here  -->
+      </div>
+    </section>
+
+    <footer>
+      <p class="ox">Created By Sankalpa Acharya</p>
+    </footer>
+{% endblock %}
