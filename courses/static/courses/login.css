@@ -7,6 +7,14 @@ header{
     border-bottom: 1px solid #d1cccc;
 }
 
+ul{
+    list-style: none;
+}
+
+li{
+    color: red;
+}
+
 header span{
    font-size: 1.4rem;
    font-weight: bold;
@@ -118,7 +126,7 @@ label{
  
 }
 .container{
-    margin: 0;
+    margin-top: 3rem;
 }
 .parent{
     width: 100%;

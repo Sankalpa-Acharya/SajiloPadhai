@@ -6,7 +6,7 @@
 
 {% endblock %}
 
-  {% block title %} Sajilo Padhai {% endblock %}
+  {% block title %}Login {% endblock %}
 
 {% block body %}
 <header>
@@ -15,29 +15,24 @@
 
     <div class="container">
 <h2>Login</h2>
-        <form action="">
+        <form action="" method="POST" novalidate>
+        {% csrf_token %}
             <div class="parent">
-            <div class="child">
-
-            <div class="child">
-
-                <label for="">Email:</label>
-                <input type="email">
-            </div>
-          
-
-            <div class="child">
-
-                <label for="">Password:</label>
-                <input type="password">
-            </div>
-          
+                {% for field in form %}
+                <div class="child">
+    
+                    <label for="">{{field.label_tag}}</label>
+                    {{field}}
+                    {{field.errors}}
+                </div>
+               
+            {% endfor %}
         
         </div>
           
         <a href="{% url 'singup' %}">Don't have account ?</a>
         <div class="btn-div">
-            <button>Submit</button>
+            <button type="submit">Submit</button>
         </div>
 
         </div>

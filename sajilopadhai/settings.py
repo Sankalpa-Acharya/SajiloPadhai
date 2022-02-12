@@ -53,6 +53,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'sajilopadhai.urls'
+AUTH_USER_MODEL = 'courses.User'
 
 TEMPLATES = [
     {

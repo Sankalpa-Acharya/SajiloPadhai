@@ -6,7 +6,7 @@
 
 {% endblock %}
 
-  {% block title %} Sajilo Padhai {% endblock %}
+  {% block title %} SingUp {% endblock %}
 
 {% block body %}
 <header>
@@ -19,37 +19,18 @@
   
     <div class="container">
 <h2>Registration</h2>
-        <form action="">
+        <form action="" method="POST" novalidate>
+            {% csrf_token %}
             <div class="parent">
-         
+         {% for field in form %}
             <div class="child">
 
-                <label for="">Last Name:</label>
-                <input type="text">
+                <label for="">{{field.label_tag}}</label>
+                {{field}}
+                {{field.errors}}
             </div>
-            <div class="child">
-
-                <label for="">Email:</label>
-                <input type="email">
-            </div>
-            <div class="child">
-
-                <label for="">Password:</label>
-                <input type="password">
-            </div>
-            <div class="child">
-
-                <label for="">Confirm Password:</label>
-                <input type="password">
-            </div>
-            <div class="child">
-
-                <label for="">Gender:</label>
-                <select>
-                    <option value="science">Male</option>
-                    <option value="management">Female</option>
-                </select>
-            </div>
+           
+        {% endfor %}
          
           
          
@@ -57,7 +38,7 @@
           
         <a href="{% url 'login' %}">Already have account ?</a>
         <div class="btn-div">
-            <button>Submit</button>
+            <button type="submit">Submit</button>
         </div>
 
         </div>

@@ -7,5 +7,5 @@ urlpatterns=[
     path('courses',views.CourseView.as_view()),
     path('video/<slug:slug>',views.VideoView.as_view()),
     path('login',views.LoginView.as_view(), name='login'),
-    path('singup',views.SingUpView.as_view(), name='singup'),
+    path('singup',views.SingUpView.as_view(), name='singup')
 ]
