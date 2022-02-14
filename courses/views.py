@@ -2,25 +2,47 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.views import View
 from .forms import SingUpForm
+from .models import Course,Video,Comment
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.forms import AuthenticationForm
 # Create your views here.
 
 class HomeView(View):
     def get(self,request):
-        return render(request,'courses/index.html')
+        all_course=Course.objects.all()[:3]
+        context={'courses':all_course}
+        return render(request,'courses/index.html',context)
+
+
 
 
 class CourseView(View):
-    def get(self,request):
-        return render(request,'courses/courses.html')
+    def get(self,request,slug):
+        course=Course.objects.get(slug=slug)
+        try:
+            video=Video.objects.filter(course=course).reverse()[0]
+            slug_value=video.slug
+        except:
+            return HttpResponseRedirect('/')
+            
+        return HttpResponseRedirect(f'/video/{slug_value}')
+
+
+
+
+def AllCourse(request):
+    allvideo=Course.objects.all()
+    return render(request,'courses/courses.html')
 
 
 
 
 class VideoView(View):
     def get(self,request,slug):
-        return render(request,'courses/content.html')
+        CourseVideo=Video.objects.get(slug=slug)
+        AllVideo=Video.objects.filter(course=CourseVideo.course)
+        context={'video':CourseVideo,'all':AllVideo}
+        return render(request,'courses/content.html',context)
 
 
 

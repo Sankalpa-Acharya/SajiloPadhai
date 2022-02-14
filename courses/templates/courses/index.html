@@ -38,23 +38,24 @@
       <div class="sec-top">
         <h2 class="ox">Courses</h2>
       </div>
-      <!-- course start here  -->
       <div class="courses">
+        <!-- course start here  -->
+        {% for course in courses %}
         <div class="course">
-          <img loading="lazy" src="{% static 'courses/webtech.png' %}" alt="" />
+          <img loading="lazy" src="{{course.image.url}}" alt="" />
 
           <div class="course-content">
-            <span> <a class="ox" href="">Web Technology Class 12</a></span>
+            <span> <a class="ox" href="">{{course.name}}</a></span>
             <p class="ox">
-              You will learn all the concept related to Webtechnology in Nepali
-              Language | According to syllabus
+              {{course.description}}
             </p>
 
             <div class="for-btn">
-              <a class="ox" href="/video">Start Watching</a>
+              <a class="ox" href="{% url 'course' course.slug %}">Start Watching</a>
             </div>
           </div>
         </div>
+        {% endfor %}
         <!-- course end here  -->
       </div>
     </section>

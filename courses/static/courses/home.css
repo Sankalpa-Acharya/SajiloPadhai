@@ -97,9 +97,8 @@ main{
 .course img {
     width: 100%;
     border-radius: 10px;
-  
-
-}
+    height: 12rem;
+  }
 
 .course .course-content{
      padding: 1.3rem;
@@ -121,12 +120,12 @@ main{
 .course-content p{
     margin-top: 1rem;
     color: #3f3f3f;
+    height: 2rem;
 }
 
-.course-content .for-btn{
-    margin-top: 5rem;
-}
-
+.course-content .for-btn {
+    padding-top: 7rem;
+  }
 
 .course-content .for-btn a{
     background-color: #6d28d9;
