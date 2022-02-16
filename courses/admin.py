@@ -11,7 +11,7 @@ class CourseAdmin(admin.ModelAdmin):
 
 
 
-# admin.site.register(User)
+admin.site.register(User)
 admin.site.register(Comment)
 admin.site.register(Video,VideoAdmin)
 admin.site.register(Course,CourseAdmin)

@@ -1,11 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.views import View
-from .forms import SingUpForm
+from .forms import SingUpForm,CommentForm
 from .models import Course,Video,Comment
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.forms import AuthenticationForm
+
 # Create your views here.
+
+
+
+
 
 class HomeView(View):
     def get(self,request):
@@ -39,9 +44,34 @@ def AllCourse(request):
 
 class VideoView(View):
     def get(self,request,slug):
+
+        form=CommentForm() # comment form 
+        
         CourseVideo=Video.objects.get(slug=slug)
+        
         AllVideo=Video.objects.filter(course=CourseVideo.course)
-        context={'video':CourseVideo,'all':AllVideo}
+        AllComment=Comment.objects.filter(video=CourseVideo) 
+        
+        context={'video':CourseVideo,'all':AllVideo,'form':form,'comments':AllComment}
+        return render(request,'courses/content.html',context)
+    
+
+    def post(self,request,slug):
+        form=CommentForm(request.POST) # comment form 
+        
+        CourseVideo=Video.objects.get(slug=slug)
+        
+        AllVideo=Video.objects.filter(course=CourseVideo.course)
+        AllComment=Comment.objects.filter(video=CourseVideo)
+
+        if form.is_valid():
+            if request.user.is_authenticated:
+                Comment.objects.create(username=request.user.username,comment=form.cleaned_data['comment'],video=CourseVideo,gender=request.user.gender)
+            else:
+                return HttpResponseRedirect('/login')
+        
+        context={'video':CourseVideo,'all':AllVideo,'form':form,'comments':AllComment}
+        
         return render(request,'courses/content.html',context)
 
 

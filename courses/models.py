@@ -33,6 +33,7 @@ class Video(models.Model):
 class Comment(models.Model):
     username=models.CharField(max_length=100)
     comment=models.CharField(max_length=100)
+    gender=models.CharField(max_length=6,choices=[('female','female'),('male','male')],null=True)
     video=models.ForeignKey(Video,on_delete=models.CASCADE)
 
 
