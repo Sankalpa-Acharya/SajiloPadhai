@@ -6,80 +6,84 @@
 
 {% endblock %}
 
-  {% block title %} Sajilo Padhai {% endblock %}
+  {% block title %}Login {% endblock %}
 
 {% block body %}
-    <header>
-      <span class="ox "><a href="/">SajiloPadhai</a></span>
-    </header>
-
-    <main>
-      <div class="left-main">
-        <h2 class="ox">Welcome To <span>Sajilo Padhai</span></h2>
-
-        <p class="ox">
-          I have made few of the courses that may help for grade 11 12 students,
-          specially science students. SajiloPadhai will provide you
-          Handwritten Notes for all students soon. I am working on it, if you wish to help me you can contact me through contact button 
-        </p>
-        <a class="ox btn1" href="{% url 'login' %}">Login</a>
-        <a class="ox btn1 btn2">Contact</a>
-      </div>
-
-      <div class="right-main">
-        <img loading="lazy"
-          src="https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa"
-          alt=""
-        />
-      </div>
-    </main>
-
-    <section>
-      <div class="sec-top">
-        <h2 class="ox">Courses</h2>
-      </div>
-      <div class="courses">
-        <!-- course start here  -->
-        {% for course in courses %}
-        <div class="course">
-          <img loading="lazy" src="{{course.image.url}}" alt="" />
-
-          <div class="course-content">
-            <span> <a class="ox" href="">{{course.name}}</a></span>
-            <p class="ox">
-              {{course.description}}
-            </p>
-
-            <div class="for-btn">
-              <a class="ox" href="{% url 'course' course.slug %}">Start Watching</a>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-        <!-- course end here  -->
-      </div>
-    </section>
-
-
-    <!-- our story  -->
-
-    <div class="ourstory">
-
-
-      
-
-
+    
+    <header class="main2">
+        <div class="heading">
+<span>Sajilo Padhai</span>
+<a href="" class="main2">Login</a>
+</div>
+<div class="container">
+    <p class="main">School Doesn't Teach You Good?</p>
+    
+    <div class="main-text">
+        <div class="square"></div>
+        <h1 class="main2">TECH STUDY</h1>
+        <div class="square"></div>
     </div>
     
+    <p class="main">I am here to Teach You!  </p>
+    
+    <div class="btnsec">
+    
+            <a href="" class="main2">Bring My Course</a>
+            <a href="" class="main2">Demo</a>
+    
+    </div>
+</div>
+
+<div class="svgmaker">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBmain2="0 0 1440 320"><path fill="#6b21a8" fill-opacity="1" d="M0,224L48,197.3C96,171,192,117,288,117.3C384,117,480,171,576,170.7C672,171,768,117,864,112C960,107,1056,149,1152,160C1248,171,1344,149,1392,138.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg></div>
+</header>
+
+
+    <div class="sec-top">
+      <h2 class="main2">Courses</h2>
+    </div>
+    <!-- course start here  -->
+    <div class="courses">
+
+      {% for course in courses %}
+      <div class="course">
+        <img src="{{course.image.url}}" alt="" />
+
+        <div class="course-content">
+          <span> <a class="main2" href="">{{course.name}}</a></span>
+          <p class="main2">
+       {{course.description}}
+          </p>
+
+          <div class="for-btn">
+            <a class="main2" href="{% url 'course' course.slug %}">Start Watching</a>
+          </div>
+        </div>
+      </div>
+ {% endfor %}
+      <!-- course end here  -->
+    </div>
+
+<main>
+    <div class="admin">
+        <div class="profile">
+        <img src="https://res.cloudinary.com/dwnigdgck/image/upload/v1645289971/personal/sankalpa_skrceu.jpg" alt="">
+        <div class="text">
+        <span class="main2">Sankalpa Acharya</span>
+        <span class="main2">Founder</span>
+    </div>
+    </div>
+
+    <p class="main2"> Welcome to sajilo padhai,If you have some doubt and want to ask me something feel free to contact me or if you have some suggestions for me you can comment it in video </p>
+</div>
+</main>
 
 
 
+<footer>
+
+  <span class="main2">Contact Mail :Sajilopadhaii@gmail.com</span>
+</footer>
 
 
-
-
-
-    <footer>
-      <p class="ox">Created By Sankalpa Acharya</p>
-    </footer>
 {% endblock %}
