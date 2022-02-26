@@ -42,7 +42,8 @@ INSTALLED_APPS = [
 
     # my apps
     'cloudinary',
-    'courses'
+    'courses',
+    'ckeditor'
 ]
 
 MIDDLEWARE = [

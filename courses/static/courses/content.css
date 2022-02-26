@@ -189,7 +189,13 @@ section .comment input{
 
     padding: 1rem;
     width: 100%;
+    overflow-x: hidden;
 
+}
+
+.blog-content img{
+    height: 2rem;
+    width: 100% !important;
 }
 .blog p{
     width: 100%;

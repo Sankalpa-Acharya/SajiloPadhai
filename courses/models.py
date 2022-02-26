@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from cloudinary.models import CloudinaryField
+from ckeditor.fields import RichTextField
 # Create your models here.
 class User(AbstractUser):
     gender=models.CharField(max_length=6, choices=[('male','Male'),('female','Female')],default='Male')
@@ -25,7 +26,7 @@ class Video(models.Model):
     slug=models.SlugField()
     course=models.ForeignKey(Course,on_delete=models.CASCADE)
     link=models.CharField(max_length=50)
-    description=models.CharField(max_length=500,null=True)
+    description=RichTextField()
 
     def __str__(self):
         return self.name

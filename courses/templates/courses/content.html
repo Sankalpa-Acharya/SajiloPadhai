@@ -47,9 +47,9 @@
     <div class="blog">
 
         <h2 class="rob">{{video.name}}</h2>
-          <p class="main2">
-    {{video.description}} 
-          </p>
+          <div class="blog-content main2">
+    {{video.description| safe}} 
+</div>
 
       </div>
 
@@ -59,10 +59,11 @@
       <p class="add main2">Add Comment</p>
       <section id="section">
     <div class="comment">
-
+<form action="" method="POST">
+    {% csrf_token %}
         <input type="text" class="main2" placeholder="Add Comment">
         <button class="main2" >Comment</button>
-
+    </form>
     </div>
 
     <div class="all-comments">
@@ -76,6 +77,24 @@
             </div>
             
         </div>
+        {% for comment in comments %}
+        <div class="user-comment">
+{% if comment.gender == "male" %}
+
+<img src="https://res.cloudinary.com/dwnigdgck/image/upload/v1644944179/personal/undraw_male_avatar_323b_c2y8cu.png" alt="">
+{% else %}
+
+<img src="https://res.cloudinary.com/dwnigdgck/image/upload/v1644944179/personal/undraw_female_avatar_w3jk_ju3hyq.png" alt="">
+
+
+    {% endif %}
+            <div class="profile-name">
+                <p class="main2">{{comment.username}}</p>
+                <span class="main2">{{comment.comment}}</span>
+            </div>
+            
+        </div>
+        {% endfor %}
 <!-- ended here  -->
     </div>
 
