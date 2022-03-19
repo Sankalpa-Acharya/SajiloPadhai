@@ -1,0 +1,215 @@
+
+body{
+    overflow-x: hidden;
+}
+
+header{
+    
+    width: 100vw;
+    background-color: #fafafa4f;
+    padding: 1rem;
+    border-bottom: 1px solid #d1cccc;
+}
+
+header span{
+   font-size: 1.4rem;
+   font-weight: bold;
+}
+
+header a{
+    text-decoration: none;
+    color: #6d28d9;
+}
+
+
+/* main section start here */
+
+main{
+
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: 65% 35%;
+}
+
+
+.video-player{
+
+    background:url(../img/Please\ wait.png) center no-repeat;
+    border-radius: 4px;
+
+}
+.tab{
+    margin:0 1rem;
+    display: flex;
+    padding: 1rem 1rem;
+    width: 65%;
+    display: flex;
+    
+}
+
+.tab span:first-child{
+    border-bottom: 4px solid #6d28d9;
+}
+
+.tab span{
+    margin-right: 1rem;
+    font-size: 1.12rem;
+    cursor: pointer;
+}
+
+
+
+.video-player iframe{
+    width: 100%;
+    height: 26rem;
+    border-radius: 4px;
+}
+
+.video-list{
+    padding:1rem 2rem;
+    overflow-y: auto;
+    height: 26rem;
+    border-bottom: 2px solid #ded4e6;
+}
+
+.video-list .list{
+    padding: 1.2rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border-radius: 5px;
+    font-weight: 400;
+}
+
+.video-list  a{
+    text-decoration: none;
+    color: black;
+    margin: 1rem;
+}
+
+
+
+.blog{
+
+    padding: 2rem;
+    width: 90%;
+    margin-top:-1rem ;
+
+}
+
+.blog h2{
+    margin-bottom: 1.4rem;
+    color: #363636;
+    font-size: 2rem;
+}
+
+.message{
+    padding:2rem;
+    
+}
+
+
+
+.blog p{
+    font-size: 16px;
+    width: 80%;
+    color: #555454;
+}
+
+
+section{
+    padding: 1rem 3rem;
+}
+
+
+section .comment input{
+    outline: none;
+    padding: .5rem .9rem;
+    width: 100%;
+    font-size: 16px;
+    border:none;
+    border-bottom: 1px solid black;
+}
+
+.comment button{
+    padding: .5rem;
+    background-color: #6d28d9;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: .6rem 0;
+    border-radius: 4px;
+}
+
+.all-comments{
+    margin-top: 1rem;
+}
+
+
+
+.user-comment {
+    display: flex;
+    margin-bottom: 1rem;
+    background-color: aliceblue;
+    padding: 1rem;
+  }
+
+.user-comment img{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+}
+
+.profile-name{
+    padding: .4rem;
+}
+.profile-name p{
+    font-weight: bold;
+}
+
+
+.add{
+    padding:0 3rem;
+    font-size: 19px;
+    cursor: pointer;
+    color: blue;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width:640px) {
+
+    main{
+
+        grid-template-columns: 1fr ;
+    
+    }
+.video-list{
+    padding: 0;
+    margin: 2rem 0;
+    height: fit-content;
+}
+.blog{
+
+    padding: 2rem;
+    width: 100%;
+    overflow-x: hidden;
+
+}
+
+.blog-content img{
+    height: 2rem;
+    width: 100% !important;
+}
+.blog p{
+    width: 100%;
+}
+section{
+    padding:1rem;
+}
+    
+.add{
+    padding: .9rem;
+}
+
+
+  }

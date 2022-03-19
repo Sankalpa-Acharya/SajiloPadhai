@@ -1,0 +1,315 @@
+
+.heading{
+    background-color: #6b21a8;
+    color: white;
+    padding: 1.4rem 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.heading span{
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.heading a{
+ 
+    background-color: #ec4899;
+    padding: .3rem .7rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    
+
+}
+
+.heading a:hover{
+    
+    background-color: #f01f88;
+}
+
+
+
+
+.container{
+    background-color: #6b21a8;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    margin-top: -3rem;
+    
+}
+
+
+.container p{
+    font-size: 1.7em;
+}
+.container p:first-child{
+    
+    margin: 2rem;
+    font-size: 1.4em;
+}
+
+.container h1{
+    
+    font-size: 7rem;
+}
+
+.main-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square{
+    width: .8rem;
+    height: .8rem;
+    background-color: white;
+    transform: rotate(45deg);
+    margin: 2rem;
+}
+
+
+.btnsec{
+    margin-top: 3.5rem;
+  
+}
+.btnsec a{
+    
+    background-color: #ec4899;
+    padding: .5rem 1rem;
+    border-radius: 1.3rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    margin-right: 2rem;
+    font-weight: bold;
+    font-size: 1.19rem;
+    color: white;
+
+    
+}
+
+.btnsec a:hover{
+    background-color: #6b21a8;
+    transform: scale(2);
+    transition: .5s;
+    padding: .7rem 1.2rem;
+    font-size: 1.20rem
+   
+}
+
+.btnsec a:nth-child(2){
+    
+  background-color: #6b21a8;
+  border: 1px solid white;
+  color: white;
+
+  
+}
+.btnsec a:nth-child(2):hover{
+    
+  background-color: #ec4899;
+  border: none;
+  
+}
+
+.svgmaker{
+    display: flex;
+    width: 100%;
+    height: 17rem;
+}
+
+.svgmaker svg{
+    width: 100%;
+}
+
+/* course content  */
+.sec-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.courses{
+    padding: 1.3rem;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.course{
+    margin:1rem 2rem ;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border-radius: 13px;
+}
+
+.course img {
+    width: 100%;
+    border-radius: 10px;
+  
+
+}
+
+.course .course-content{
+     padding: 1.3rem;
+}
+
+
+.course-content a{
+    text-decoration: none;
+    color: black;
+    font-weight: rem;
+    
+}
+.course-content span{
+    
+    font-size: 1.1rem;
+    
+}
+
+.course-content p{
+    margin-top: 1rem;
+    color: #3f3f3f;
+}
+
+.course-content .for-btn{
+    margin-top: 5rem;
+}
+
+
+.course-content .for-btn a{
+    background-color: #6d28d9;
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.course-content .for-btn a:hover{
+    background-color: #4d13ac;
+    
+}
+main{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+main .admin{
+
+    display: flex;
+    padding: 1rem;
+    margin:1rem 1rem;
+    display: flex;
+    flex-direction: column ;
+}
+
+main p{
+    text-transform: capitalize;
+    font-weight: 100  ;
+}
+
+.admin {
+    border-radius: 10px;
+    background-color: #f8fafc;
+}
+
+.admin img{
+    object-fit: cover;
+    border-radius: 50%;
+    width: 3.6rem;
+    height: 3.6rem;
+}
+
+.admin .profile{
+    /* padding:0 3rem; */
+    display: flex;
+    
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    padding:0.6rem  1rem;
+}
+
+.text span{
+    color: #00000077;
+}
+.profile span:first-child{
+    font-weight: bold;
+    color: black;
+
+}
+.profile span:nth-child(2){
+    margin-top: .2rem;
+    
+}
+
+.admin p{
+    margin-top: 1rem;
+    color:#000000c5
+}
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3f3f3f;
+    color: white;
+    padding: .5rem;
+}
+
+
+
+
+@media screen and (max-width: 640px) {
+    
+    .container h1{
+    
+        font-size: 3.5rem;
+    }
+    .container p{
+    
+        font-size: 1.2rem;
+    }
+    .container{
+        margin-top: -10rem;
+    }
+    .courses{
+        grid-template-columns: 1fr;
+    }
+    .svgmaker svg{
+        width: 100vw;
+        height: 29vh;
+        margin-top: -4rem;
+    }
+
+    .sec-top{
+        margin-top: -5rem;
+    }
+    .container p:first-child {
+        margin: 2rem;
+        font-size: 1.2em;
+      }
+
+main{
+  display: flex;
+  flex-direction: column;
+}
+.admin{
+    margin-top: 1rem;
+}
+.square{
+
+    margin: 1rem;
+}
+
+  }

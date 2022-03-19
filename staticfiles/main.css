@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.main2{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.ox{
+    font-family: 'Oxygen', sans-serif;
+   }
+
+a{
+    text-decoration: none;
+}
