@@ -3,8 +3,8 @@
 {% block links %}
     <link rel="stylesheet" href="{% static 'main.css' %}" />
     <link rel="stylesheet" href="{% static 'courses/content.css' %}" />
-
-{% endblock %}
+  
+    {% endblock %}
 
   {% block title %}Video {% endblock %}
 
@@ -44,7 +44,7 @@
 
     </div>
     <p class="message main2">message</p>
-    <div class="blog">
+    <div class="blog main2">
 
         <h2 class="rob">{{video.name}}</h2>
           <div class="blog-content main2">
@@ -56,76 +56,19 @@
 
 
 
-      <p class="add main2">Add Comment</p>
-      <section id="section">
-    <div class="comment">
-<form action="" method="POST">
-    {% csrf_token %}
-        <input type="text" class="main2" placeholder="Add Comment">
-        <button class="main2" >Comment</button>
-    </form>
-    </div>
-
-    <div class="all-comments">
-<!-- user comment  -->
-        <div class="user-comment">
-
-            <img src="https://res.cloudinary.com/dwnigdgck/image/upload/v1645289971/personal/sankalpa_skrceu.jpg" alt="">
-            <div class="profile-name">
-                <p class="main2">Instructor</p>
-                <span class="main2">Hi Viewer, if have any suggestions for me then please comment</span>
-            </div>
-            
-        </div>
-        {% for comment in comments %}
-        <div class="user-comment">
-{% if comment.gender == "male" %}
-
-<img src="https://res.cloudinary.com/dwnigdgck/image/upload/v1644944179/personal/undraw_male_avatar_323b_c2y8cu.png" alt="">
-{% else %}
-
-<img src="https://res.cloudinary.com/dwnigdgck/image/upload/v1644944179/personal/undraw_female_avatar_w3jk_ju3hyq.png" alt="">
-
-
-    {% endif %}
-            <div class="profile-name">
-                <p class="main2">{{comment.username}}</p>
-                <span class="main2">{{comment.comment}}</span>
-            </div>
-            
-        </div>
-        {% endfor %}
-<!-- ended here  -->
-    </div>
-
-
-</section>
+      
 
 
 
 
 <script>
 let checker=true;
-let section=document.getElementById("section");
 let message=document.querySelector('.message');
 let note=document.querySelector('.notes');
 let add=document.querySelector('.add');
 let blog=document.querySelector('.blog');
 message.style.display="none"
-section.style.display="none"
-add.addEventListener('click',()=>{
-    if (checker){
 
-    section.style.display="block";
-    add.innerHTML="Hide Comments";
-    checker=false;
-    }
-else{
-    section.style.display="none";
-    add.innerHTML="Add Comment" 
-    checker=true;
-}
-})
 
 //personal react app lol
 

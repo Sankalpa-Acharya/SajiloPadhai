@@ -47,13 +47,13 @@
     
 }
 
+
+.container p{
+    font-size: 1.7em;
+}
 .container p:first-child{
     
     margin: 2rem;
-}
-
-.container p{
-    
     font-size: 1.4em;
 }
 
@@ -73,6 +73,7 @@
     height: .8rem;
     background-color: white;
     transform: rotate(45deg);
+    margin: 2rem;
 }
 
 
@@ -196,13 +197,15 @@
 }
 main{
     padding: 2rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 main .admin{
 
     display: flex;
     padding: 1rem;
+    margin:1rem 1rem;
     display: flex;
     flex-direction: column ;
 }
@@ -213,7 +216,6 @@ main p{
 }
 
 .admin {
-    width: 40%;
     border-radius: 10px;
     background-color: #f8fafc;
 }
@@ -272,7 +274,7 @@ footer{
     
     .container h1{
     
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
     .container p{
     
@@ -293,8 +295,21 @@ footer{
     .sec-top{
         margin-top: -5rem;
     }
-   
-.admin{
-    width: 100%;
+    .container p:first-child {
+        margin: 2rem;
+        font-size: 1.2em;
+      }
+
+main{
+  display: flex;
+  flex-direction: column;
 }
+.admin{
+    margin-top: 1rem;
+}
+.square{
+
+    margin: 1rem;
+}
+
   }

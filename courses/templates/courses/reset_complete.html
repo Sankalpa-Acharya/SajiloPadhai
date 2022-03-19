@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block links %}
+    <link rel="stylesheet" href="{% static 'main.css' %}" />
+    <link rel="stylesheet" href="{% static 'courses/login.css' %}" />
+
+{% endblock %}
+
+{% block title %}Reset Password {% endblock %}
+
+{% block style %}
+    <style>
+     h2{
+         margin-bottom:10px ;
+     }
+.container{
+    padding:0  2rem;
+    margin: 0;
+    width: 100%;
+}
+p{
+    margin-bottom: 10px;
+}
+</style>
+
+{% endblock %}
+
+{% block body %}
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#6b21a8" fill-opacity="1" d="M0,256L48,218.7C96,181,192,107,288,90.7C384,75,480,117,576,128C672,139,768,117,864,101.3C960,85,1056,75,1152,101.3C1248,128,1344,192,1392,224L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+    <div class="container">
+<h2>Password Reset Complete</h2>
+     <p>Your Password has been set. You may go ahead and login now</p>
+
+     <a href="">Click to Login</a>
+    </div>
+
+{% endblock %}

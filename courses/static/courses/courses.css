@@ -16,6 +16,9 @@ header a{
     color: #6d28d9;
 }
 
+body{
+    overflow-x: hidden;
+}
 
 .courses{
     padding: 1.3rem;
@@ -75,7 +78,6 @@ header a{
     background-color: #4d13ac;
     
 }
-
 
 
 

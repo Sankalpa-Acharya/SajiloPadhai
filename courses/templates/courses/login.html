@@ -12,7 +12,17 @@
 <header>
     <span class="ox "><a href="/">SajiloPadhai</a></span>
   </header>
+{% if messages %}
+  <div class="message">
 
+    {% for message in messages %}
+  <div class="created">
+      <p>{{message}}</p>
+      <span id="close">&times;</span>
+  </div>
+  {% endfor %}
+  </div>
+    {% endif %}
     <div class="container">
 <h2>Login</h2>
         <form action="" method="POST" novalidate>
@@ -29,15 +39,31 @@
             {% endfor %}
         
         </div>
-          
-        <a href="{% url 'singup' %}">Don't have account ?</a>
+        <a href="{% url 'reset_password' %}">Forgot Password</a>
         <div class="btn-div">
             <button type="submit">Submit</button>
         </div>
-
-        </div>
+        <div class="forgot">
+      <a  href="{% url 'singup' %}">Don't have account ?</a>
+    </div>
+    </div>
         </form>
 
     </div>
+
+
+    {% if messages %}
+    <script>
+document.getElementById("close").addEventListener("click",()=>{
+
+document.querySelector('.created').style.display='none'
+
+})
+
+
+
+    </script>
+
+    {% endif %}
 
 {% endblock %}

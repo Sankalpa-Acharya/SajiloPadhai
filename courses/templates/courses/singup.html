@@ -13,10 +13,21 @@
     <span class="ox "><a href="/">SajiloPadhai</a></span>
   </header>
 
+{% if messages %}
 
+<div class="message">
+    {% for message in messages %}
+<div class="created">
 
+    <p>Your Account Has been created , Now Login</p>
+    <span id="close">&times;</span>
+</div>
+{% endfor %}
 
+</div>
   
+{% endif %}
+
     <div class="container">
 <h2>Registration</h2>
         <form action="" method="POST" novalidate>
@@ -45,5 +56,20 @@
         </form>
 
     </div>
+
+
+{% if messages %}
+    <script>
+document.getElementById("close").addEventListener("click",()=>{
+
+document.querySelector('.created').style.display='none'
+
+})
+
+
+
+    </script>
+
+    {% endif %}
 
 {% endblock %}

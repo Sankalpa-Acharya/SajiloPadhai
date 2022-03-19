@@ -131,9 +131,19 @@ STATICFILES_DIRS=[BASE_DIR/'static']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# cloudinary configuration
+
 cloudinary.config( 
   cloud_name = "dwnigdgck", 
   api_key = "211415388287541", 
   api_secret = "0aYdgs75rE6-uRMy0gl_SwDY4Kg",
  
 )
+
+# smtp configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_PORT=587
+EMAIL_USE_TLS=True
+EMAIL_HOST_USER='sajilopadhaii@gmail.com'
+EMAIL_HOST_PASSWORD='XeGm8V5E35Gxen'

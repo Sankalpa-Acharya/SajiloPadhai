@@ -3,7 +3,8 @@
 {% block links %}
     <link rel="stylesheet" href="{% static 'main.css' %}" />
     <link rel="stylesheet" href="{% static 'courses/home.css' %}" />
-
+    <meta property="og:title" content="Sajilo Padhai" />
+    <meta property="og:description" content="Sajilo Padhai is E-learning platform for nepali students where they can find different courses with Interest" />
 {% endblock %}
 
   {% block title %}Sajilo Padhai {% endblock %}
@@ -16,7 +17,7 @@
 <a href="{% url 'login' %}" class="main2">Login</a>
 </div>
 <div class="container">
-    <p class="main">School Doesn't Teach You Good?</p>
+    <p class="main">We got you all courses in nepali</p>
     
     <div class="main-text">
         <div class="square"></div>
@@ -24,12 +25,12 @@
         <div class="square"></div>
     </div>
     
-    <p class="main">I am here to Teach You!  </p>
+    <p class="main">Learning is Now Easy! </p>
     
     <div class="btnsec">
     
-            <a href="" class="main2">Bring My Course</a>
-            <a href="" class="main2">Demo</a>
+            <a href="{% url 'all course' %}" class="main2">View All Courses</a>
+            <a href="{% url 'login' %}" class="main2">Demo</a>
     
     </div>
 </div>
@@ -50,7 +51,7 @@
         <img src="{{course.image.url}}" alt="" />
 
         <div class="course-content">
-          <span> <a class="main2" href="">{{course.name}}</a></span>
+          <span> <a class="main2" href="{% url 'course' course.slug %}">{{course.name}}</a></span>
           <p class="main2">
        {{course.description}}
           </p>
@@ -60,22 +61,23 @@
           </div>
         </div>
       </div>
- {% endfor %}
-      <!-- course end here  -->
+      {% endfor %}
     </div>
-
+      <!-- course end here  -->
+   
 <main>
     <div class="admin">
         <div class="profile">
-        <img src="https://res.cloudinary.com/dwnigdgck/image/upload/v1645289971/personal/sankalpa_skrceu.jpg" alt="">
+        <img src="https://res.cloudinary.com/dwnigdgck/image/upload/v1645883928/personal/IMG_20220225_121031-removebg-preview_s4b54h.png" alt="">
         <div class="text">
         <span class="main2">Sankalpa Acharya</span>
         <span class="main2">Founder</span>
     </div>
     </div>
 
-    <p class="main2"> Welcome to sajilo padhai,If you have some doubt and want to ask me something feel free to contact me or if you have some suggestions for me you can comment it in video </p>
+    <p class="main2"> Welcome to sajilo padhai,Here You will get to learn about web Development and web security.All courses with no cost at all.Feedbacks are always appreciated</p>
 </div>
+     
 </main>
 
 

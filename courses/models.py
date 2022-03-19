@@ -5,6 +5,10 @@ from ckeditor.fields import RichTextField
 # Create your models here.
 class User(AbstractUser):
     gender=models.CharField(max_length=6, choices=[('male','Male'),('female','Female')],default='Male')
+    email=models.EmailField(unique=True)
+    username=models.CharField(max_length=50)
+    USERNAME_FIELD='email'
+    REQUIRED_FIELDS = ['gender','username']
 
 
     

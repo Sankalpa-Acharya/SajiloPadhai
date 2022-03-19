@@ -36,7 +36,6 @@ main{
 
     background:url(../img/Please\ wait.png) center no-repeat;
     border-radius: 4px;
-    border: 2px solid #e9e5e5   ;
 
 }
 .tab{
@@ -70,6 +69,7 @@ main{
     padding:1rem 2rem;
     overflow-y: auto;
     height: 26rem;
+    border-bottom: 2px solid #ded4e6;
 }
 
 .video-list .list{
@@ -89,7 +89,7 @@ main{
 
 .blog{
 
-    padding: 3rem;
+    padding: 2rem;
     width: 90%;
     margin-top:-1rem ;
 
@@ -142,15 +142,17 @@ section .comment input{
 }
 
 .all-comments{
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 
 
-.user-comment{
+.user-comment {
     display: flex;
-    margin: 2rem 0;
-}
+    margin-bottom: 1rem;
+    background-color: aliceblue;
+    padding: 1rem;
+  }
 
 .user-comment img{
     width: 3.5rem;
@@ -184,10 +186,11 @@ section .comment input{
 .video-list{
     padding: 0;
     margin: 2rem 0;
+    height: fit-content;
 }
 .blog{
 
-    padding: 1rem;
+    padding: 2rem;
     width: 100%;
     overflow-x: hidden;
 
@@ -208,8 +211,5 @@ section{
     padding: .9rem;
 }
 
-.video-list{
-    height: fit-content;
-}
 
   }
